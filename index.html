@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Advanced English Dashboard for Valset Academy students.">
+  <title>Valset Academy | Advanced English</title>
+  <link rel="icon" type="image/png" href="assets/valset-logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="background-orb orb-one"></div>
+  <div class="background-orb orb-two"></div>
+
+  <main id="loginView" class="login-layout">
+    <section class="brand-panel" aria-label="Presentación del curso">
+      <div class="brand-topline">
+        <div class="norway-flag" role="img" aria-label="Bandera de Noruega">
+          <span class="flag-vertical-white"></span>
+          <span class="flag-horizontal-white"></span>
+          <span class="flag-vertical-blue"></span>
+          <span class="flag-horizontal-blue"></span>
+        </div>
+        <span>Inspired by Norway · Designed for global English</span>
+      </div>
+
+      <div class="brand-copy">
+        <p class="eyebrow">VALSET ACADEMY</p>
+        <h1>Advanced English<br><span>Command Centre</span></h1>
+        <p class="hero-text">A focused learning space for students ready to master nuanced grammar, academic communication and authentic English.</p>
+      </div>
+
+      <div class="brand-metrics" aria-label="Características del curso">
+        <div><strong>C1</strong><span>Target level</span></div>
+        <div><strong>12</strong><span>Core modules</span></div>
+        <div><strong>∞</strong><span>Practice mindset</span></div>
+      </div>
+    </section>
+
+    <section class="login-panel">
+      <div class="login-card">
+        <img class="login-logo" src="assets/valset-logo.png" alt="Valset monogram logo">
+        <p class="eyebrow">STUDENT ACCESS</p>
+        <h2>Welcome back</h2>
+        <p class="muted">Sign in to continue your advanced English journey.</p>
+
+        <form id="loginForm" novalidate>
+          <label for="username">Username</label>
+          <div class="input-wrap">
+            <span aria-hidden="true">◉</span>
+            <input id="username" name="username" type="text" autocomplete="username" placeholder="Enter your username" required>
+          </div>
+
+          <label for="password">Password</label>
+          <div class="input-wrap">
+            <span aria-hidden="true">◆</span>
+            <input id="password" name="password" type="password" autocomplete="current-password" placeholder="Enter your password" required>
+            <button id="togglePassword" class="icon-button" type="button" aria-label="Show password">Show</button>
+          </div>
+
+          <p id="loginMessage" class="form-message" role="alert" aria-live="polite"></p>
+          <button class="primary-button" type="submit">Enter dashboard <span aria-hidden="true">→</span></button>
+        </form>
+
+        <p class="login-note">Demo access: <strong>demo</strong> / <strong>ValsetDemo!</strong></p>
+      </div>
+    </section>
+  </main>
+
+  <main id="dashboardView" class="dashboard hidden" aria-hidden="true">
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <img src="assets/valset-logo.png" alt="Valset logo">
+        <div><strong>VALSET</strong><span>ACADEMY</span></div>
+      </div>
+
+      <nav aria-label="Dashboard navigation">
+        <button class="nav-item active" data-section="overview"><span>⌂</span>Overview</button>
+        <button class="nav-item" data-section="grammar"><span>◇</span>Advanced Grammar</button>
+        <button class="nav-item" data-section="practice"><span>✓</span>Practice Lab</button>
+        <button class="nav-item" data-section="resources"><span>▤</span>Resources</button>
+      </nav>
+
+      <div class="sidebar-quote">
+        <div class="mini-flag norway-flag" aria-hidden="true">
+          <span class="flag-vertical-white"></span><span class="flag-horizontal-white"></span>
+          <span class="flag-vertical-blue"></span><span class="flag-horizontal-blue"></span>
+        </div>
+        <p>“Language is the map of a culture.”</p>
+        <span>— Rita Mae Brown</span>
+      </div>
+
+      <button id="logoutButton" class="logout-button" type="button">Log out</button>
+    </aside>
+
+    <section class="dashboard-main">
+      <header class="topbar">
+        <button id="menuButton" class="menu-button" type="button" aria-label="Open menu">☰</button>
+        <div>
+          <p class="eyebrow">ADVANCED ENGLISH PROGRAMME</p>
+          <h2 id="pageTitle">Learning overview</h2>
+        </div>
+        <div class="student-chip">
+          <span class="student-avatar" id="studentInitials">AS</span>
+          <div><strong id="studentName">Advanced Student</strong><span id="studentMeta">C1 · Advanced English</span></div>
+        </div>
+      </header>
+
+      <div id="overviewSection" class="content-section">
+        <section class="welcome-banner">
+          <div>
+            <p class="eyebrow light">VELKOMMEN · WELCOME</p>
+            <h3>Sharpen your English.<br>Express ideas with precision.</h3>
+            <p>Your next challenge combines advanced form, meaning and real-world communication.</p>
+            <button class="secondary-button" data-open-module="inversion" type="button">Continue learning</button>
+          </div>
+          <div class="welcome-mark">
+            <div class="large-flag norway-flag" role="img" aria-label="Bandera de Noruega">
+              <span class="flag-vertical-white"></span><span class="flag-horizontal-white"></span>
+              <span class="flag-vertical-blue"></span><span class="flag-horizontal-blue"></span>
+            </div>
+            <span>NORWAY</span>
+          </div>
+        </section>
+
+        <section class="stats-grid" aria-label="Student progress">
+          <article class="stat-card"><span>Course progress</span><strong id="progressValue">35%</strong><div class="progress-track"><i id="progressBar" style="width:35%"></i></div></article>
+          <article class="stat-card"><span>Completed topics</span><strong><b id="completedCount">2</b> / 6</strong><small>Keep building momentum</small></article>
+          <article class="stat-card"><span>Current streak</span><strong><b id="streakCount">4</b> days</strong><small>Consistency creates fluency</small></article>
+        </section>
+
+        <div class="section-heading"><div><p class="eyebrow">FEATURED MODULES</p><h3>Complex grammar, clearly explained</h3></div><button class="text-button" data-go-section="grammar" type="button">View all modules →</button></div>
+        <section id="featuredModules" class="module-grid"></section>
+
+        <div class="two-column-layout">
+          <section class="video-card">
+            <div class="section-heading compact"><div><p class="eyebrow">COURSE INTRODUCTION</p><h3>Meet your instructor</h3></div></div>
+            <video controls preload="metadata" poster="assets/valset-logo.png">
+              <source src="assets/course-introduction.mp4" type="video/mp4">
+              Your browser does not support HTML5 video.
+            </video>
+          </section>
+
+          <section class="challenge-card">
+            <p class="eyebrow">WEEKLY CHALLENGE</p>
+            <h3>Rewrite for emphasis</h3>
+            <p>Transform the sentence using negative inversion:</p>
+            <blockquote>“I had never encountered such a convincing argument.”</blockquote>
+            <textarea id="challengeAnswer" rows="4" placeholder="Write your transformed sentence..."></textarea>
+            <button id="checkChallenge" class="primary-button" type="button">Check my answer</button>
+            <p id="challengeFeedback" class="feedback" aria-live="polite"></p>
+          </section>
+        </div>
+      </div>
+
+      <div id="grammarSection" class="content-section hidden">
+        <div class="section-heading"><div><p class="eyebrow">ADVANCED GRAMMAR</p><h3>Master form, nuance and register</h3></div></div>
+        <section id="allModules" class="module-grid expanded"></section>
+      </div>
+
+      <div id="practiceSection" class="content-section hidden">
+        <div class="section-heading"><div><p class="eyebrow">PRACTICE LAB</p><h3>Precision drills</h3></div></div>
+        <section id="quizContainer" class="quiz-card"></section>
+      </div>
+
+      <div id="resourcesSection" class="content-section hidden">
+        <div class="section-heading"><div><p class="eyebrow">RESOURCES</p><h3>Tools for independent study</h3></div></div>
+        <section class="resource-grid">
+          <article><span>01</span><h4>Academic phrase bank</h4><p>Connectors and structures for essays, reports and presentations.</p><button type="button" data-resource="phrases">Open resource</button></article>
+          <article><span>02</span><h4>Error analysis checklist</h4><p>A practical routine for editing complex written work.</p><button type="button" data-resource="checklist">Open resource</button></article>
+          <article><span>03</span><h4>Pronunciation focus</h4><p>Sentence stress, thought groups and connected speech for advanced learners.</p><button type="button" data-resource="pronunciation">Open resource</button></article>
+        </section>
+        <section id="resourceViewer" class="resource-viewer hidden"></section>
+      </div>
+    </section>
+  </main>
+
+  <dialog id="moduleDialog" class="module-dialog">
+    <button id="closeDialog" class="dialog-close" type="button" aria-label="Close">×</button>
+    <p id="dialogLevel" class="eyebrow"></p>
+    <h2 id="dialogTitle"></h2>
+    <p id="dialogDescription"></p>
+    <div id="dialogContent" class="lesson-content"></div>
+    <button id="completeModule" class="primary-button" type="button">Mark as completed</button>
+  </dialog>
+
+  <script src="users.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
