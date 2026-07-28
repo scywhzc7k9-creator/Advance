@@ -35,6 +35,6 @@ window.STUDENT_USERS = [
     password: "PRUEBA",
     displayName: "UBAM",
     level: "N/A",
-    group: "COORDINACIÓN"
+    group: "COORDINACION"
   }
 ];
