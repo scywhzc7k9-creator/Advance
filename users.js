@@ -13,7 +13,7 @@ window.STUDENT_USERS = [
     username: "VALSET",
     password: "NORGE",
     displayName: "LAET. VALSET",
-    level: "C1",
+    level: "Native",
     group: "English Academy"
   },
   {
