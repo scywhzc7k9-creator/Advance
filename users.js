@@ -33,8 +33,8 @@ window.STUDENT_USERS = [
    {
     username: "UBAM",
     password: "PRUEBA",
-    displayName: "LAET. JAIR",
-    level: "C1",
-    group: "English ACADEMY"
+    displayName: "UBAM",
+    level: "N/A",
+    group: "COORDINACIÓN"
   }
 ];
