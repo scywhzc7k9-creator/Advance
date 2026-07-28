@@ -36,5 +36,12 @@ window.STUDENT_USERS = [
     displayName: "UBAM",
     level: "N/A",
     group: "COORDINACION"
-  }
+  },
+    {
+    username: "MARU",
+    password: "12345",
+    displayName: "MARU",
+    level: "B2",
+    group: "Middle Course"
+  },
 ];
