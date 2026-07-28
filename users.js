@@ -29,5 +29,12 @@ window.STUDENT_USERS = [
     displayName: "LAET. JAIR",
     level: "C1",
     group: "English ACADEMY"
+  },
+   {
+    username: "UBAM",
+    password: "PRUEBA",
+    displayName: "LAET. JAIR",
+    level: "C1",
+    group: "English ACADEMY"
   }
 ];
